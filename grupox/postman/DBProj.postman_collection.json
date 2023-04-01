@@ -1,0 +1,495 @@
+{
+	"info": {
+		"_postman_id": "0c09ff7e-053b-40a6-be7d-7ac334987401",
+		"name": "DBProj",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/dbproj/user/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dbproj",
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Token",
+						"value": "",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"darwin\",\r\n    \"email\": \"darwin@gmail.com\",\r\n    \"password\": \"darwin\",\r\n    \"compr_morada\": \"Rua da casa do darwin\",\r\n    \"compr_nif\": 28194443,\r\n    \"type\": \"comprador\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/dbproj/user/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dbproj",
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show_users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTI5ODA0MTYsInN1YiI6IjE7YWRtaW5pc3RyYWRvciJ9.3xXF1HKiuCMKVUtztohL3-M1CHzyLw2qgEBNOp-A-b0",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/dbproj/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dbproj",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show_products",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTI2MzYyNDcsInN1YiI6IjU7Y29tcHJhZG9yIn0.s8LhZyDZS2eqcaJ61ikfusX4gw2__mduRqn2np1l4lw",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/dbproj/products/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dbproj",
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTI0NjA3MDAsInN1YiI6IjI7dmVuZGVkb3IifQ.Axekd20CDiaZ3L5R8shhn5eAXrQaJ97SB6ZWU_bNim8",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Mac Book 2\",\r\n    \"stock\": 50,\r\n    \"preco\": 1999.99,\r\n    \"descricao\": \"teste TESTE  222\",\r\n    \"cpu\": \"intel i7\",\r\n    \"ram\": 64,\r\n    \"type\": \"computador\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/dbproj/product/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dbproj",
+						"product",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_product",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTI2MzY1OTksInN1YiI6IjI7dmVuZGVkb3IifQ.rkxt7evR5L77OjBYt14y_vfTMYAKPSyKO7aFaPQO2l4",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"descricao\": \"segunda alteracao\",\r\n    \"preco\": 1500,\r\n    \"nome\": \"LENOVO_V2\",\r\n    \"stock\":300\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/dbproj/product/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dbproj",
+						"product",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTI5ODIxNTcsInN1YiI6IjQ7Y29tcHJhZG9yIn0.b9iiBQ6Hg_g5LFaTrI6yT4kPZspgiqiQfVDMCumyrv4",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cart\": [[1, 1]],\r\n    \"coupon\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/dbproj/order/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dbproj",
+						"order",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rating",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTI2MzY1MTUsInN1YiI6IjU7Y29tcHJhZG9yIn0.CJxvFAqWAAXwU2a98trh8JezVMrtpFlt9ChVq-HD4Vo",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"rating\": 3,\r\n    \"comment\": \"OK\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/dbproj/rating/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dbproj",
+						"rating",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "comment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTI5NjMzNTAsInN1YiI6IjI7dmVuZGVkb3IifQ.6Q13KlCXjVnxl-AsDfYBtvLy-DPNc8B9nMls2YbPvjY",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"question\": \"teste 2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/dbproj/questions/1/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dbproj",
+						"questions",
+						"1",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_campaign",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTI5ODA0MTYsInN1YiI6IjE7YWRtaW5pc3RyYWRvciJ9.3xXF1HKiuCMKVUtztohL3-M1CHzyLw2qgEBNOp-A-b0",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"new campaign\",\r\n    \"date_start\": \"2022-05-19\",\r\n    \"date_end\": \"2022-05-21\",\r\n    \"coupons\": 30,\r\n    \"discount\": 50,\r\n    \"duration\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/dbproj/campaign",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dbproj",
+						"campaign"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "subscribe_campaign",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTI5ODI0NzQsInN1YiI6IjU7Y29tcHJhZG9yIn0.NuElYbPzYU0lLJP7NKraeF2mDEQDB6ePxdjXAikRVXg",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/dbproj/subscribe/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dbproj",
+						"subscribe",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_notifications",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTI5NjMzNTAsInN1YiI6IjI7dmVuZGVkb3IifQ.6Q13KlCXjVnxl-AsDfYBtvLy-DPNc8B9nMls2YbPvjY",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/dbproj/notifications/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dbproj",
+						"notifications",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "month_stats",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTI5ODA0MTYsInN1YiI6IjE7YWRtaW5pc3RyYWRvciJ9.3xXF1HKiuCMKVUtztohL3-M1CHzyLw2qgEBNOp-A-b0",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/dbproj/report/year",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dbproj",
+						"report",
+						"year"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "campaign_stats",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTI5ODI1NTgsInN1YiI6IjE7YWRtaW5pc3RyYWRvciJ9.rcX6M0Kx-HH_VxXlkXk3ZuAEEwKXu8awHz_TvVcRG3w",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/dbproj/report/campaign/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dbproj",
+						"report",
+						"campaign",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "product_info",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTI5ODcyMjMsInN1YiI6IjE7YWRtaW5pc3RyYWRvciJ9.YQ2y2K4jIJacADiXZ5fSn4iG-YETLSm-V-pTnrkbzgQ",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/dbproj/product/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dbproj",
+						"product",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
